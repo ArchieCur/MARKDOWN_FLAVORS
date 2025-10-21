@@ -1,0 +1,101 @@
+name: Feature Request
+description: Suggest adding a new flavor or feature to track
+title: "[REQUEST]: "
+labels: ["enhancement", "discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement! Let's discuss whether this addition would benefit the community.
+        
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: What type of addition is this?
+      options:
+        - Add a new Markdown flavor
+        - Add a new feature to track
+        - Other improvement
+    validations:
+      required: true
+      
+  - type: input
+    id: flavor-name
+    attributes:
+      label: Flavor or Feature Name
+      description: What should be added?
+      placeholder: "Example: Typora, or 'Custom Containers'"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: justification
+    attributes:
+      label: Why should this be added?
+      description: |
+        Help us understand the value:
+        - How widely is it used?
+        - Why is it important to track?
+        - Who would benefit from this addition?
+      placeholder: |
+        Example:
+        - Typora is used by thousands of technical writers
+        - It has unique image handling features not covered elsewhere
+        - Would help users choosing between WYSIWYG editors
+    validations:
+      required: true
+      
+  - type: textarea
+    id: adoption-evidence
+    attributes:
+      label: Evidence of Adoption/Importance
+      description: |
+        For new flavors: Show it's widely used
+        For new features: Show it's supported by multiple flavors
+      placeholder: |
+        Links to:
+        - GitHub stars, download stats, or usage metrics
+        - Multiple flavors supporting this feature
+        - Community discussions
+        
+  - type: input
+    id: documentation
+    attributes:
+      label: Official Documentation
+      description: Link to official docs or specification
+      placeholder: "https://..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: feature-support
+    attributes:
+      label: Feature Support Information
+      description: |
+        For new flavors: Which features does it support?
+        For new features: Which existing flavors support it?
+      placeholder: |
+        Example for new flavor:
+        - Supports: Tables, Footnotes, Math
+        - Doesn't support: Task lists, Mermaid
+        
+        Example for new feature:
+        - GitHub supports it via X syntax
+        - Obsidian supports it via Y syntax
+        - Pandoc doesn't support it
+        
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      options:
+        - label: I have checked that this flavor/feature isn't already included
+          required: true
+        - label: I have provided evidence of adoption or importance
+          required: true
+        - label: I have included a link to official documentation
+          required: true
+        - label: For new flavors - I can provide feature support info for all tracked features
+          required: false
+        - label: For new features - At least 3 existing flavors support this feature
+          required: false
