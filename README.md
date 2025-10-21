@@ -14,22 +14,22 @@ This project builds upon the excellent work by [@vimtaai](https://github.com/vim
 
 ## Feature Support Matrix
 
-| Flavor | Superscript | Subscript | Strikethrough | Insertion | Highlight | Footnote | Task List | Table | Callout/Admonition | Wikilinks | Mermaid | Math | Math Block | Emoji |
-|--------|-------------|-----------|---------------|-----------|-----------|----------|-----------|-------|-------------------|-----------|---------|------|------------|-------|
-| **CommonMark** | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| **GitHub (GFM)** | ❌ | ❌ | `~~text~~` | ❌ | ❌ | ❌ | `- [ ]` | ✅ | ❌ | ❌ | ✅ | ❌ | `$$...$$` | `:emoji:` |
-| **GitLab** | ❌ | ❌ | `~~text~~` | `{+text+}` | ❌ | `[^1]` | `- [ ]` | ✅ | ❌ | ❌ | ✅ | `$...$` | ` ```math ` | `:emoji:` |
-| **Obsidian** | ❌ | `~text~` | `~~text~~` | ❌ | `==text==` | `[^1]` | `- [ ]` | ✅ | `> [!note]` | `[[page]]` | ✅ | `$...$` | `$$...$$` | `:emoji:` |
-| **Discord** | ❌ | ❌ | `~~text~~` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | `:emoji:` |
-| **Pandoc** | `^text^` | `~text~` | `~~text~~` | ❌ | ❌ | `[^1]` | ❌ | ✅ | `::: info` | ❌ | ❌ | `$...$` | `$$...$$` | `:emoji:` |
-| **MultiMarkdown** | `^text^` | `~text~` | `{--text--}` | `{++text++}` | `{==text==}` | `[^1]` | ❌ | ✅ | ❌ | ❌ | ❌ | `\\(...\\)` | `\\[...\\]` | ❌ |
-| **Kramdown** | ❌ | ❌ | ❌ | ❌ | ❌ | `[^1]` | ❌ | ✅ | ❌ | ❌ | ❌ | `$$...$$` | `$$...$$` | ❌ |
-| **Python-Markdown** | `^text^` * | `~text~` * | `~~text~~` * | ❌ | `==text==` * | `[^1]` | `- [ ]` * | ✅ | `!!! note` * | `[[page]]` * | ❌ | ❌ | ❌ | `:emoji:` * |
-| **Marked.js** | ❌ | ❌ | `~~text~~` * | ❌ | ❌ | ❌ | `- [ ]` * | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | `:emoji:` * |
-| **R Markdown** | `^text^` | `~text~` | `~~text~~` | ❌ | ❌ | `[^1]` | ❌ | ✅ | `::: callout` | ❌ | ✅ | `$...$` | `$$...$$` | `:emoji:` |
-| **MDX** | ❌ | ❌ | `~~text~~` * | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| **Quarto** | `^text^` | `~text~` | `~~text~~` | ❌ | ❌ | `[^1]` | `- [ ]` | ✅ | `::: callout` | ❌ | ✅ | `$...$` | `$$...$$` | `:emoji:` |
-| **Markdown Extra** | ❌ | ❌ | ❌ | ❌ | ❌ | `[^1]` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Flavor | Superscript | Subscript | Strikethrough | Insertion | Highlight | Footnote | Task List | Table | Abbreviation | Definition List | Alerts | Callout/Admonition | Wikilinks | Mermaid | Math | Math Block | Emoji |
+|--------|-------------|-----------|---------------|-----------|-----------|----------|-----------|-------|-------------|----------------|--------|-------------------|-----------|---------|------|------------|-------|
+| **CommonMark** | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **GitHub (GFM)** | ❌ | ❌ | `~~text~~` | ❌ | ❌ | ❌ | `- [ ]` | ✅ | ❌ | ❌ | `> [!NOTE]` | ❌ | ❌ | ✅ | ❌ | `$$...$$` | `:emoji:` |
+| **GitLab** | ❌ | ❌ | `~~text~~` | `{+text+}` | ❌ | `[^1]` | `- [ ]` | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | `$...$` | ` ```math ` | `:emoji:` |
+| **Obsidian** | ❌ | `~text~` | `~~text~~` | ❌ | `==text==` | `[^1]` | `- [ ]` | ✅ | ❌ | ❌ | `> [!note]` | ✅ | `[[page]]` | ✅ | `$...$` | `$$...$$` | `:emoji:` |
+| **Discord** | ❌ | ❌ | `~~text~~` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | `:emoji:` |
+| **Pandoc** | `^text^` | `~text~` | `~~text~~` | ❌ | ❌ | `[^1]` | ❌ | ✅ | `*[...]:` | `: ` | ❌ | `::: info` | ❌ | ❌ | `$...$` | `$$...$$` | `:emoji:` |
+| **MultiMarkdown** | `^text^` | `~text~` | `{--text--}` | `{++text++}` | `{==text==}` | `[^1]` | ❌ | ✅ | `*[...]:` | `: ` | ❌ | ❌ | ❌ | ❌ | `\\(...\\)` | `\\[...\\]` | ❌ |
+| **Kramdown** | ❌ | ❌ | ❌ | ❌ | ❌ | `[^1]` | ❌ | ✅ | `*[...]:` | `: ` | ❌ | ❌ | ❌ | ❌ | `$$...$$` | `$$...$$` | ❌ |
+| **Python-Markdown** | `^text^` * | `~text~` * | `~~text~~` * | ❌ | `==text==` * | `[^1]` | `- [ ]` * | ✅ | `*[...]:` * | `: ` * | ❌ | `!!! note` * | `[[page]]` * | ❌ | ❌ | ❌ | `:emoji:` * |
+| **Marked.js** | ❌ | ❌ | `~~text~~` * | ❌ | ❌ | ❌ | `- [ ]` * | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | `:emoji:` * |
+| **R Markdown** | `^text^` | `~text~` | `~~text~~` | ❌ | ❌ | `[^1]` | ❌ | ✅ | ❌ | ❌ | ❌ | `::: callout` | ❌ | ✅ | `$...$` | `$$...$$` | `:emoji:` |
+| **MDX** | ❌ | ❌ | `~~text~~` * | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **Quarto** | `^text^` | `~text~` | `~~text~~` | ❌ | ❌ | `[^1]` | `- [ ]` | ✅ | ❌ | `: ` | ❌ | `::: callout` | ❌ | ✅ | `$...$` | `$$...$$` | `:emoji:` |
+| **Markdown Extra** | ❌ | ❌ | ❌ | ❌ | ❌ | `[^1]` | ❌ | ✅ | `*[...]:` | `: ` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 **Legend:**
 - ✅ = Supported natively
@@ -47,20 +47,28 @@ This project builds upon the excellent work by [@vimtaai](https://github.com/vim
 - **Insertion**: Markup for inserted/added content (often used with CriticMarkup)
 - **Highlight**: Background highlighting for emphasis
 
+### Semantic Syntax Features
+
+These features provide meaningful structure for accessibility, AI parsing, and semantic HTML:
+
+- **Abbreviation**: Define abbreviations with `*[HTML]: Hypertext Markup Language` - improves accessibility and helps readers understand acronyms
+- **Definition List**: Key-value pairs using `: ` syntax - useful for glossaries, term definitions, and structured metadata
+- **Alerts** (GitHub-specific): Styled notification blocks using `> [!NOTE]`, `> [!WARNING]`, `> [!IMPORTANT]` syntax - similar to callouts but with standardized types
+- **Callout/Admonition**: Styled blocks for notes, warnings, tips using various syntaxes (`::: note`, `> [!note]`, `!!! note`) - helps organize information by importance/type
+
 ### Document Structure
 
 - **Footnote**: Reference notes at the bottom of the document
 - **Task List**: Interactive checkboxes for to-do items
 - **Table**: Structured tabular data
-- **Callout/Admonition**: Styled blocks for notes, warnings, tips (:::, > [!note], !!! syntax)
 
 ### Advanced Features
 
-- **Wikilinks**: Internal document linking with [[page]] syntax
+- **Wikilinks**: Internal document linking with `[[page]]` syntax
 - **Mermaid**: Diagram and flowchart generation
 - **Math**: Inline mathematical expressions (LaTeX)
 - **Math Block**: Display mathematical equations (LaTeX blocks)
-- **Emoji**: Support for :emoji: syntax or Unicode
+- **Emoji**: Support for `:emoji:` syntax or Unicode
 
 ## Flavor-Specific Notes
 
@@ -68,7 +76,7 @@ This project builds upon the excellent work by [@vimtaai](https://github.com/vim
 The base specification that many flavors extend. Intentionally minimal to ensure broad compatibility.
 
 ### GitHub Flavored Markdown (GFM)
-GitHub's implementation, widely used in README files, issues, and pull requests. Added support for math blocks in 2022.
+GitHub's implementation, widely used in README files, issues, and pull requests. Added support for math blocks in 2022 and Alerts in 2023.
 
 ### Obsidian
 Optimized for knowledge management with strong support for internal linking, callouts, and community plugins that extend functionality.
@@ -95,7 +103,7 @@ We welcome contributions! This is a living document that should reflect the curr
 2. **Add or update flavor information** in both:
    - `README.md` (the comparison table)
    - `markdown-flavors.csv` (the data file)
-3. **Include evidence** in your PR:
+3. **Include in your PR**:
    - Link to official documentation
    - Version number (if applicable)
    - Date tested
@@ -115,6 +123,7 @@ The machine-readable data is available in `markdown-flavors.csv` for programmati
 
 ## Version History
 
+- **2025-01-22**: Added GitHub Alerts, Abbreviations, Definition Lists; reorganized features into semantic categories (thanks to [@saeris](https://reddit.com/user/saeris) for terminology feedback)
 - **2025-01**: Updated comparison with modern flavors (Obsidian, Quarto, MDX), new features (callouts, wikilinks, emoji)
 - **2021-06**: Original comparison by [@vimtaai](https://github.com/vimtaai)
 
@@ -133,4 +142,4 @@ This comparison is released under CC0 1.0 Universal (Public Domain). The origina
 
 **Maintainers**: Looking for maintainers to help keep this up-to-date. Open an issue if interested!
 
-**Last Updated**: January 2025
+**Last Updated**: January 22, 2025
