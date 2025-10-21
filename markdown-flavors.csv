@@ -1,0 +1,15 @@
+Flavor,Superscript,Subscript,Strikethrough,Insertion,Highlight,Footnote,Task List,Table,Callout/Admonition,Wikilinks,Mermaid,Math Inline,Math Block,Emoji,Notes
+CommonMark,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Base specification
+GitHub (GFM),No,No,~~text~~,No,No,No,"- [ ]",Yes,No,No,Yes,No,$$...$$,:emoji:,Added math in 2022
+GitLab,No,No,~~text~~,{+text+},No,[^1],"- [ ]",Yes,No,No,Yes,$...$$,"```math",:emoji:,
+Obsidian,No,~text~,~~text~~,No,==text==,[^1],"- [ ]",Yes,> [!note],[[page]],Yes,$...$,$$...$$,:emoji:,Many community plugins
+Discord,No,No,~~text~~,No,No,No,No,No,No,No,No,No,No,:emoji:,Limited formatting
+Pandoc,^text^,~text~,~~text~~,No,No,[^1],No,Yes,::: info,No,No,$...$,$$...$$,:emoji:,Document converter
+MultiMarkdown,^text^,~text~,{--text--},{++text++},{==text==},[^1],No,Yes,No,No,No,\(...\),\[...\],No,CriticMarkup syntax
+Kramdown,No,No,No,No,No,[^1],No,Yes,No,No,No,$$...$$,$$...$$,No,Ruby parser
+Python-Markdown,^text^*,~text~*,~~text~~*,No,==text==*,[^1],"- [ ]*",Yes,!!! note*,[[page]]*,No,No,No,:emoji:*,Requires extensions
+Marked.js,No,No,~~text~~*,No,No,No,"- [ ]*",Yes,No,No,No,No,No,:emoji:*,JavaScript parser
+R Markdown,^text^,~text~,~~text~~,No,No,[^1],No,Yes,::: callout,No,Yes,$...$,$$...$$,:emoji:,For R notebooks
+MDX,No,No,~~text~~*,No,No,No,No,Yes,No,No,No,No,No,No,JSX in Markdown
+Quarto,^text^,~text~,~~text~~,No,No,[^1],"- [ ]",Yes,::: callout,No,Yes,$...$,$$...$$,:emoji:,Built on Pandoc
+Markdown Extra,No,No,No,No,No,[^1],No,Yes,No,No,No,No,No,No,PHP Markdown extension
