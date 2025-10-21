@@ -1,0 +1,111 @@
+name: Bug Report
+description: Report incorrect or outdated information in the comparison
+title: "[BUG]: "
+labels: ["bug", "needs verification"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue! This helps keep the comparison accurate.
+        
+  - type: dropdown
+    id: flavor
+    attributes:
+      label: Which Markdown flavor has incorrect information?
+      options:
+        - CommonMark
+        - GitHub (GFM)
+        - GitLab
+        - Obsidian
+        - Discord
+        - Pandoc
+        - MultiMarkdown
+        - Kramdown
+        - Python-Markdown
+        - Marked.js
+        - R Markdown
+        - MDX
+        - Quarto
+        - Markdown Extra
+        - Other (specify in description)
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: feature
+    attributes:
+      label: Which feature is incorrect?
+      options:
+        - Superscript
+        - Subscript
+        - Strikethrough
+        - Insertion
+        - Highlight
+        - Footnote
+        - Task List
+        - Table
+        - Callout/Admonition
+        - Wikilinks
+        - Mermaid
+        - Math Inline
+        - Math Block
+        - Emoji
+        - Multiple features
+        - Other (specify in description)
+    validations:
+      required: true
+      
+  - type: textarea
+    id: current-info
+    attributes:
+      label: Current Information
+      description: What does the comparison currently say?
+      placeholder: "Example: The table says Obsidian doesn't support superscript"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: correct-info
+    attributes:
+      label: Correct Information
+      description: What should it say?
+      placeholder: "Example: Obsidian actually does support superscript via <sup> HTML tags"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: |
+        Please provide evidence for the correction:
+        - Link to official documentation
+        - Screenshot showing the feature working/not working
+        - Version number where behavior changed
+        - Link to source code
+      placeholder: |
+        Example:
+        - Documentation: https://help.obsidian.md/...
+        - Tested in: Obsidian v1.5.3
+        - Screenshot: [attached]
+    validations:
+      required: true
+      
+  - type: input
+    id: version
+    attributes:
+      label: Version Information
+      description: If applicable, which version of the parser/platform did you test?
+      placeholder: "Example: Obsidian 1.5.3, Pandoc 3.1.2"
+      
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      options:
+        - label: I have tested this myself or provided documentation link
+          required: true
+        - label: I have checked existing issues to avoid duplicates
+          required: true
+        - label: I have provided evidence (documentation, screenshot, or version info)
+          required: true
