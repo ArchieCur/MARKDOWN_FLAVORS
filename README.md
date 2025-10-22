@@ -8,7 +8,7 @@ This comparison helps developers, technical writers, and documentation maintaine
 
 ### Original Work
 
-This project builds upon the excellent work by [@vimtaai](https://github.com/vimtaai) from their [markdown-flavors.md](https://gist.github.com/vimtaai/37c936679e8a2a2c22728f102eb7e8ae) comparison (2021). We've updated it for 2025 with modern flavors, new features, and community contributions.
+This project builds upon the excellent work by [@vimtaai](https://github.com/vimtaai) from their [markdown-flavors.md](https://gist.github.com/vimtaai/37c936679e8a2a2c22728f102eb7e8ae) comparison (2021). We've updated it for 2025 with modern flavors, new features, and community contributions.Completed collaboratively with Claude Sonnet 4.5 as a development partner and technical consultant.
 
 **Note:** The original comparison included **ExtraMark**, a student project that has been archived here for historical reference.
 
@@ -143,3 +143,4 @@ This comparison is released under CC0 1.0 Universal (Public Domain). The origina
 **Maintainers**: Looking for maintainers to help keep this up-to-date. Open an issue if interested!
 
 **Last Updated**: January 22, 2025
+
